@@ -1,33 +1,90 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin:0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.chartTabs-container {
+  width:700px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding-bottom: 15px;
+}
+.chartTabs-container .react-tabs__tab-list {
+  display:flex;
+  border:none;
+  width:90%;
+}
+.react-tabs__tab--selected,
+.react-tabs__tab {
+  border:none !important;
+  border-radius: 0;
+  outline: none;
+  
+}
+.react-tabs__tab--selected::after {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+  background-color: #cf2057;;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.chartItem-title {
+  color: #7f7f7f;
+  font-size: 15px;
+}
+.chartItem-count {
+  color: #0a0a0a;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+.chartItem-secondcount {
+  color: #78cb6f;
+  font-size: 12px;
+  font-weight: bold;
+}
+.react-tabs__tab-list > li {
+  flex-grow: 1;
+  flex-basis: 0;
+  cursor: pointer;
+}
+
+.chartItem-additional {
+  font-size: 11px;
+  font-weight: bold;
+  color: #7f7f7f;
+}
+.chartLi-container {
+  padding: 20px 0;
+}
+.chartTab-Navigagation {
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content:space-between;
+  padding:0 12px;
+  border-top:1px solid #dddddd;
+  padding-top: 15px;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chartTab-Navigagation button {
+  cursor:pointer;
+  background-color:transparent;
+  outline:none;
+  border:none;
+  font-size: 14px;
+}
+.chart-daysfilter {
+  color: #a7a7a7;
+}
+.seeAudience {
+  color: #a8bdd0;
+}
+.react-tabs__tab-panel {
+  padding:0 5px;
 }
